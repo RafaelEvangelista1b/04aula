@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haruy Sushi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            barlow: ["Barlow", "sans-serif"]
+          },
+          colors: {
+            primary: "#ca3c3f"
+          }
+        }
+      }
+    }
+  </script>
+
+</head>
+
+<body class="font-barlow text-gray-800">
+  <header class="flex justify-between items-center px-6 py-4 md:px-16">
+
+    <img src="./assets/images/logo.png" class="w-32 md:w-40" alt="Logo Haruy Sushi">
+
+    <button id="menu-btn" class="md:hidden flex flex-col gap-1">
+      <span class="linha w-6 h-0.5 bg-black transition-all"></span>
+      <span class="linha w-6 h-0.5 bg-black transition-all"></span>
+      <span class="linha w-6 h-0.5 bg-black transition-all"></span>
+    </button>
+
+    <nav id="menu"
+      class="hidden absolute top-20 left-0 w-full bg-white text-center shadow-md md:static md:block md:w-auto md:shadow-none">
+      <ul class="flex flex-col md:flex-row gap-6 p-6 md:p-0">
+        <li><a href="#cardapio" class="hover:text-primary transition">Cardápio</a></li>
+        <li><a href="#footer" class="hover:text-primary transition">Sobre</a></li>
+        <li><a href="#whatsApp" class="hover:text-primary transition">WhatsApp</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-12">
+
+      <div class="md:w-1/2 text-center md:text-left">
+        <h1 class="text-3xl md:text-5xl font-bold mb-6">
+          O verdadeiro sabor da cozinha japonesa
+        </h1>
+
+        <a href="#cardapio"
+          class="inline-block border border-gray-800 px-6 py-3 rounded-xl hover:bg-primary hover:text-white transition">
+          Veja o Cardápio
+        </a>
+      </div>
+
+      <div class="md:w-1/2 mt-8 md:mt-0">
+        <img src="./assets/images/banner.png" class="w-full max-w-md mx-auto" alt="Prato japonês">
+      </div>
+
+    </section>
+
+    <section id="cardapio" class="max-w-5xl mx-auto px-6 py-12">
+
+      <h2 class="text-3xl font-bold text-center mb-10">Cardápio</h2>
+
+      <!--menu categoria início-->
+      <nav id="nav-categorias" class="overflow-x-auto whitespace-nowrap snap-x flex gap-2 mt-6 pb-1">
+        <button data-cat="sushis"
+          class="snap-start px-4 py-1 rounded-full bg-primary text-white font-bold text-sm transition-transform duration-150 cursor-pointer flex-shrink-0 btn-cat">
+          Sushi
+        </button>
+        <button data-cat="Temakis"
+          class="snap-start px-4 py-1 rounded-full bg-primary text-white font-bold text-sm transition-transform duration-150 cursor-pointer flex-shrink-0 btn-cat">
+          Temaki
+        </button>
+        <button data-cat="bebidas"
+          class="snap-start px-4 py-1 rounded-full bg-primary text-white font-bold text-sm transition-transform duration-150 cursor-pointer flex-shrink-0 btn-cat">
+          Bebidas
+        </button>
+        <button data-cat="Sobremesas"
+          class="snap-start px-4 py-1 rounded-full bg-primary text-white font-bold text-sm transition-transform duration-150 cursor-pointer flex-shrink-0 btn-cat">
+          Sobremesas
+        </button>
+      </nav>
+
+      <!--menu categoria fim-->
+
+      <!--categoria: sushi-->
+      <div id="cat-sushis" class="categoria-conteudo">
+        <h3 class="text-primary text-xl font-semibold mb-4">
+          Sushi
+        </h3>
+
+        <div class="space-y-6 mb-10">
+
+          <div>
+            <div class="flex justify-between font-bold">
+              <span>Hot Dog Sushi </span>
+              <span class="text-primary">R$ 37,00</span>
+            </div>
+            <p class="text-gray-500 text-sm">
+              1 Hot Dog Filadélfia, salmão e cream cheease
+            </p>
+          </div>
+
+          <div>
+            <div class="flex justify-between font-bold">
+              <span>Combinado Sushi Maçaricado</span>
+              <span class="text-primary">R$ 87,00</span>
+            </div>
+            <p class="text-gray-500 text-sm">
+              10 Niguiris, 10 Uramakis e 10 Sashimis
+            </p>
+          </div>
+
+          <div>
+            <div class="flex justify-between font-bold">
+              <span>Combinado Sushi</span>
+              <span class="text-primary">R$ 73,00</span>
+            </div>
+            <p class="text-gray-500 text-sm">
+              1 Temaki Filadélfia, 10 Uramakis e 10 Sashimis
+            </p>
+          </div>
+
+          <div>
+            <div class="flex justify-between font-bold">
+              <span>Combinado Temaki e Sashimis</span>
+              <span class="text-primary">R$ 75,00</span>
+            </div>
+            <p class="text-gray-500 text-sm">
+              1 Temaki Filadélfia, 10 Uramakis Filadélfia e 10 Sashimis
+            </p>
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <div id="cat-Temakis" class="categoria-conteudo">
+        <h3 class="text-primary text-xl font-semibold mb-4">
+          Temaki
+        </h3>
+
+        <div class="space-y-6 mb-10">
+
+          <div>
+            <div class="flex justify-between font-bold">
+              <span>Temaki tradicional</span>
+              <span class="text-primary">R$ 37,00</span>
+            </div>
+            <p class="text-gray-500 text-sm">
+              Arroz, salmão e cream cheease
+            </p>
+          </div>
+
+          <div>
+            <div class="flex justify-between font-bold">
+              <span>Temaki sem arroz</span>
+              <span class="text-primary">R$ 87,00</span>
+            </div>
+            <p class="text-gray-500 text-sm">
+              Salmão e cream cheease
+            </p>
+          </div>
+
+          <div>
+            <div class="flex justify-between font-bold">
+              <span>Combinado Temaki</span>
+              <span class="text-primary">R$ 73,00</span>
+            </div>
+            <p class="text-gray-500 text-sm">
+              1 Temaki Filadélfia, 10 Uramakis e 10 Sashimis
+            </p>
+          </div>
+
+          <div>
+            <div class="flex justify-between font-bold">
+              <span>Combinado Temaki e Sashimis</span>
+              <span class="text-primary">R$ 75,00</span>
+            </div>
+            <p class="text-gray-500 text-sm">
+              1 Temaki Filadélfia, 10 Uramakis Filadélfia e 10 Sashimis
+            </p>
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <!-- categoria bebidas-->
+     <div id="cat-bebidas" class="categoria-conteudo hidden">
+        <h3 class="text-primary text-xl font-semibold mb-4">
+          Bebidas
+        </h3>
+
+        <div class="space-y-6">
+          <div>
+            <div class="flex justify-between font-bold">
+              <span>Soda Italiana- 250 ml</span>
+              <span class="text-primary">R$ 9,00</span>
+            </div>
+            <p class="text-gray-500 text-sm">Sabores: Maça Verde, Morango, Groselha, Blue Ice</p>
+          </div>
+          <div>
+          <div class="flex justify-between font-bold">
+            <span>Suco Natural - 500 ml </span>
+            <span class="text-primary">R$ 14,00</span>
+          </div>
+          <p class="text-gray-500 text-sm">Sabores: Laranja, Limonada, Melancia, Morango e Maracujá</p>
+        </div>
+
+        <div>
+          <div class="flex justify-between font-bold">
+            <span>Refrigerante</span>
+            <span class="text-primary">R$ 8,00</span>
+          </div>
+          <p class="text-gray-500 text-sm">Lata 350ml</p>
+        </div>
+
+        <div>
+          <div class="flex justify-between font-bold">
+            <span>Água</span>
+            <span class="text-primary">R$ 4,00</span>
+          </div>
+          <p class="text-gray-500 text-sm">Garrafa 500ml</p>
+        </div>
+
+
+        </div>
+        </div>
+
+        <div id="cat-Sobremesas" class="categoria-conteudo hidden">
+        <h3 class="text-primary text-xl font-semibold mb-4">
+          Sobremesas
+        </h3>
+
+        <div class="space-y-6">
+          <div>
+            <div class="flex justify-between font-bold">
+              <span>Sorvete pote</span>
+              <span class="text-primary">R$ 9,00</span>
+            </div>
+            <p class="text-gray-500 text-sm">Sabores: Maça Verde, Morango, Groselha, Blue Ice</p>
+          </div>
+          <div>
+          <div class="flex justify-between font-bold">
+            <span>Mousse </span>
+            <span class="text-primary">R$ 14,00</span>
+          </div>
+          <p class="text-gray-500 text-sm">Sabores: Laranja, Limonada, Melancia, Morango e Maracujá</p>
+        </div>
+
+        <div>
+          <div class="flex justify-between font-bold">
+            <span>Refrigerante</span>
+            <span class="text-primary">R$ 8,00</span>
+          </div>
+          <p class="text-gray-500 text-sm">Lata 350ml</p>
+        </div>
+
+        <div>
+          <div class="flex justify-between font-bold">
+            <span>Água</span>
+            <span class="text-primary">R$ 4,00</span>
+          </div>
+          <p class="text-gray-500 text-sm">Garrafa 500ml</p>
+        </div>
+
+
+        </div>
+        </div>
+
+      
+
+  </section>
+
+  </main>
+
+  <footer id="footer" class="bg-gray-900 text-white text-center py-12 px-6">
+
+    <h3 class="text-xl font-bold mb-4">Haruy Sushi</h3>
+
+    <p>Rua Prof. Toledo, 500</p>
+    <p>WhatsApp: (15) 98765-4321</p>
+    <p>Aberto das 14h às 23h</p>
+
+  </footer>
+
+  <a href="https://wa.me/5515987654321" class="fixed bottom-6 right-6">
+    <img src="./assets/images/whatsapp.png" class="w-14">
+  </a>
+
+  <!--script para botão categoria-->
+  <script>
+    const botoes = document.querySelectorAll('.btn-cat');
+    const conteudos = document.querySelectorAll('.categoria-conteudo');
+
+    function mudarCategoria(cat){
+      //mostra apenas a cetegoria selecionada 
+      conteudos.forEach(div => {
+        div.id === 'cat-'+ cat
+        ? div.classList.remove('hidden')
+        : div.classList.add('hidden');
+      });
+      //atualiza estilo do botão ativo
+      botoes.forEach(btn =>{
+        if(btn.dataset.cat === cat){
+          btn.classList.add('bg-primary', 'text-white');
+          btn.classList.remove('bg-[#ebebeb]','text-dark');
+        }else{
+          btn.classList.remove('bg-primary', 'text-white');
+          btn.classList.add('bg-[#ebebeb]', 'text-dark');
+        }
+      });
+    }
+    // //adiciona eventos a cada botão
+    // botoes.forEach(btn =>{
+    //   btn.addEventListener('touchstart', ()=> {
+    //     btn.classList.add('scale-95');
+    //     mudarCategoria(btn.dataset.cat);
+    //   });
+    //   btn.addEventListener('touchend',()=> {
+    //     btn.classList.remove('scale-95');
+    //   });
+    //   btn.addEventListener('click', ()=> {
+    //     mudarCategoria(btn.dataset.cat);
+    //   });
+    // });
+
+    //ativar scroll suave para links internos
+    let startX = 0;
+    let startY = 0;
+
+    //evento de cada botão
+    botoes.forEach(btn => {
+      //touchstart é disparado assim que o dedo toca a tela 
+      btn.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        //aplica class tailwind para efeito de clique
+        btn.classList.add('scale-95', 'opacity-80');
+      });
+
+      btn.addEventListener('touched',(e) =>{
+        btn.classList.remove('scale-95', 'opacity-80');
+
+        const endX = e.changedTouches[0].clientX;
+        const endY = e.changedTouches[0].clientY;
+
+        const deltaX = Math.abs(endX - startX);
+        const deltaY = Math.abs(endY - startY);
+
+        if (deltaX < 10 && deltaY < 10) {
+          mudarCategoria(btn.databaset.cat);
+        }
+      });
+      //touchcancel se o celular aparecer uma ligação ou notificação
+      btn.addEventListener('touchcancel', () => {
+        btn.classList.remove('scale-95', 'opacity-80');
+      });
+      // click para usuários descktop
+      btn.addEventListener('click', () => {
+        mudarCategoria(btn.dataset.cat);
+      });
+    });
+  </script>
+
+  <script>
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+    const linhas = document.querySelectorAll(".linha");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+
+      linhas[0].classList.toggle("rotate-45");
+      linhas[0].classList.toggle("translate-y-1");
+
+      linhas[1].classList.toggle("opacity-0");
+
+      linhas[2].classList.toggle("-rotate-45");
+      linhas[2].classList.toggle("-translate-y-2");
+    });
+  </script>
+
+</body>
+
+</html>
